@@ -41,14 +41,54 @@ public sealed class CarMotionData
     /// World space forward Y direction (normalised)
     /// </summary>
     public short WorldForwardDirY { get; set; }
-    public short WorldForwardDirZ; // World space forward Z direction (normalised)
-    public short WorldRightDirX; // World space right X direction (normalised)
-    public short WorldRightDirY; // World space right Y direction (normalised)
-    public short WorldRightDirZ; // World space right Z direction (normalised)
-    public float GForceLateral; // Lateral G-Force component
-    public float GForceLongitudinal; // Longitudinal G-Force component
-    public float GForceVertical; // Vertical G-Force component
-    public float Yaw; // Yaw angle in radians
-    public float Pitch; // Pitch angle in radians
-    public float Roll; // Roll angle in radians
+
+    /// <summary>
+    /// World space forward Z direction (normalised)
+    /// </summary>
+    public short WorldForwardDirZ { get; set; }
+
+    /// <summary>
+    /// World space right X direction (normalised)
+    /// </summary>
+    public short WorldRightDirX { get; set; }
+
+    /// <summary>
+    /// World space right Y direction (normalised)
+    /// </summary>
+    public short WorldRightDirY { get; set; }
+
+    /// <summary>
+    /// World space right Z direction (normalised)
+    /// </summary>
+    public short WorldRightDirZ { get; set; }
+
+    /// <summary>
+    /// Lateral G-Force component
+    /// </summary>
+    public float GForceLateral { get; set; }
+
+    /// <summary>
+    /// Longitudinal G-Force component
+    /// </summary>
+    public float GForceLongitudinal { get; set; }
+
+    /// <summary>
+    /// Vertical G-Force component
+    /// </summary>
+    public float GForceVertical { get; set; }
+
+    /// <summary>
+    /// Yaw angle in radians
+    /// </summary>
+    public float Yaw { get; set; }
+
+    /// <summary>
+    /// Pitch angle in radians
+    /// </summary>
+    public float Pitch { get; set; }
+
+    /// <summary>
+    /// Roll angle in radians
+    /// </summary>
+    public float Roll { get; set; }
 };
