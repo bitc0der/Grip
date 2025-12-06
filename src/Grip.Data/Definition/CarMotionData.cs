@@ -1,5 +1,8 @@
 namespace Grip.Data.Definition;
 
+/// <summary>
+/// For the normalised vectors below, to convert to float values divide by 32767.0f – 16-bit signed values are used to pack the data and on the assumption that direction values are always between -1.0f and 1.0f.
+/// </summary>
 public sealed class CarMotionData
 {
     /// <summary>
