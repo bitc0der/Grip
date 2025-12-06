@@ -1,5 +1,8 @@
 namespace Grip.Data.Definition;
 
+/// <summary>
+/// The motion packet gives physics data for all the cars being driven.
+/// </summary>
 public sealed class PacketMotionData
 {
     /// <summary>
