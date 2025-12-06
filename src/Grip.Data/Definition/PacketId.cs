@@ -1,6 +1,6 @@
 namespace Grip.Data.Definition;
 
-public enum PacketIds : byte
+public enum PacketId : byte
 {
     /// <summary>
     /// Contains all motion data for player’s car – only sent while player is in control

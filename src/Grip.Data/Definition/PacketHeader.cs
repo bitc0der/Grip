@@ -1,5 +1,7 @@
 using System.Runtime.InteropServices;
 
+namespace Grip.Data.Definition;
+
 /// <summary>
 /// Заголовок пакета данных
 /// </summary>
@@ -34,7 +36,7 @@ public struct PacketHeader
     /// <summary>
     /// Identifier for the packet type, see below
     /// </summary>
-    public byte PacketId { get; set; }
+    public PacketId PacketId { get; set; }
 
     /// <summary>
     /// Unique identifier for the session
