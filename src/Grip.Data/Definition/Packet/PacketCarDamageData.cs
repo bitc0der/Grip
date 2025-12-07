@@ -1,6 +1,6 @@
 using System.Runtime.InteropServices;
 
-namespace Grip.Data.Definition;
+namespace Grip.Data.Definition.Packet;
 
 /// <summary>
 /// This packet details car damage parameters for all the cars in the race.

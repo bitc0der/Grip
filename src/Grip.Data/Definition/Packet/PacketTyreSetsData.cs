@@ -1,6 +1,6 @@
 using System.Runtime.InteropServices;
 
-namespace Grip.Data.Definition;
+namespace Grip.Data.Definition.Packet;
 
 /// <summary>
 /// This packets gives a more in-depth details about tyre sets assigned to a vehicle during the session.

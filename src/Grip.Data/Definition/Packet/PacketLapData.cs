@@ -1,6 +1,6 @@
 using System.Runtime.InteropServices;
 
-namespace Grip.Data.Definition;
+namespace Grip.Data.Definition.Packet;
 
 /// <summary>
 /// Lap data packet

@@ -1,4 +1,4 @@
-namespace Grip.Data.Definition;
+namespace Grip.Data.Definition.Packet;
 
 public enum PacketId : byte
 {

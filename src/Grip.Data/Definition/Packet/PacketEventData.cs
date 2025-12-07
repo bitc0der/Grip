@@ -1,6 +1,6 @@
 using System.Runtime.InteropServices;
 
-namespace Grip.Data.Definition;
+namespace Grip.Data.Definition.Packet;
 
 /// <summary>
 /// This packet gives details of events that happen during the course of a session.

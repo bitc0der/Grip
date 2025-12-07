@@ -1,6 +1,6 @@
 using System.Runtime.InteropServices;
 
-namespace Grip.Data.Definition;
+namespace Grip.Data.Definition.Packet;
 
 /// <summary>
 /// The motion packet gives extended data for the car being driven with the goal of being able to drive a motion platform setup.

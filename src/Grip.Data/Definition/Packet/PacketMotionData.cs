@@ -1,16 +1,16 @@
 using System.Runtime.InteropServices;
 
-namespace Grip.Data.Definition;
+namespace Grip.Data.Definition.Packet;
 
 /// <summary>
-/// This packet details car statuses for all the cars in the race.
-///
+/// The motion packet gives physics data for all the cars being driven.
+/// 
 /// Frequency: Rate as specified in menus
-/// Size: 1239 bytes
+/// Size: 1349 bytes
 /// Version: 1
 /// </summary>
 [StructLayout(LayoutKind.Sequential, Pack = 1)]
-public struct PacketCarStatusData
+public struct PacketMotionData
 {
     /// <summary>
     /// Header
@@ -18,8 +18,8 @@ public struct PacketCarStatusData
     public PacketHeader Header;
 
     /// <summary>
-    /// Car status data for all cars
+    /// Data for all cars on track
     /// </summary>
     [MarshalAs(UnmanagedType.ByValArray, SizeConst = 22)]
-    public CarStatusData[] CarStatusData;
+    public CarMotionData[] CarMotionData;
 }

@@ -1,6 +1,6 @@
 using System.Runtime.InteropServices;
 
-namespace Grip.Data.Definition;
+namespace Grip.Data.Definition.Packet;
 
 /// <summary>
 /// The time trial data gives extra information only relevant to time trial game mode. This packet will not be sent in other game modes. 
