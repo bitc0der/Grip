@@ -10,6 +10,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionIt
 		..\.editorconfig = ..\.editorconfig
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Grid.Console", "Grid.Console\Grid.Console.csproj", "{EEAB9437-D41B-43EA-BB1B-7C3730073187}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,5 +22,9 @@ Global
 		{BC3E9DA7-EA54-4054-BE8D-EF5685F07983}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BC3E9DA7-EA54-4054-BE8D-EF5685F07983}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BC3E9DA7-EA54-4054-BE8D-EF5685F07983}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEAB9437-D41B-43EA-BB1B-7C3730073187}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEAB9437-D41B-43EA-BB1B-7C3730073187}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEAB9437-D41B-43EA-BB1B-7C3730073187}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEAB9437-D41B-43EA-BB1B-7C3730073187}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
