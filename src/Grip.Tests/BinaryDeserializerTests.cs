@@ -44,4 +44,29 @@ public sealed class BinaryDeserializerTests
         [MarshalAs(UnmanagedType.ByValArray, SizeConst = 2)]
         public byte[] Value;
     }
+
+    [Test]
+    public void Should_DeserializeStructure_When_ValueIsEnum()
+    {
+        // Arrange
+        var buffer = new byte[] { 0xA };
+
+        // Act
+        var result = BinaryDeserializer.Deserialize<TestStructWithEnum>(buffer);
+
+        // Assert
+        Assert.That(result.Value, Is.EqualTo(TestEnum.Valye));
+    }
+
+    [StructLayout(LayoutKind.Sequential, Pack = 1)]
+    private struct TestStructWithEnum
+    {
+        public TestEnum Value;
+    }
+
+    private enum TestEnum : byte
+    {
+        Unknown = 0,
+        Valye = 0xA
+    }
 }
