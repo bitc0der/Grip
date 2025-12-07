@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Net;
 using System.Net.Sockets;
 using System.Runtime.InteropServices;
 using System.Threading;
@@ -9,18 +10,20 @@ namespace Grip.Data;
 
 public sealed class DataReceiver
 {
+    private readonly IPEndPoint _ipEndPoint;
     private readonly DataReader _dataReader;
     private readonly DataLogger? _dataLogger;
 
-    public DataReceiver(DataReader dataReader, DataLogger? dataLogger)
+    public DataReceiver(IPEndPoint ipEndPoint, DataReader dataReader, DataLogger? dataLogger = null)
     {
+        _ipEndPoint = ipEndPoint ?? throw new ArgumentNullException(nameof(ipEndPoint));
         _dataReader = dataReader ?? throw new ArgumentNullException(nameof(dataReader));
         _dataLogger = dataLogger;
     }
 
-    public async Task ReceiveAsync(CancellationToken cancellationToken)
+    public async Task ReceiveAsync(CancellationToken cancellationToken = default)
     {
-        using var udpClient = new UdpClient();
+        using var udpClient = new UdpClient(_ipEndPoint);
 
         while (true)
         {
