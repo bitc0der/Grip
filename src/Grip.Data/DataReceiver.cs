@@ -24,7 +24,9 @@ public sealed class DataReceiver
 
     public async Task ReceiveAsync(CancellationToken cancellationToken = default)
     {
-        using var udpClient = new UdpClient(_ipEndPoint);
+        using var udpClient = new UdpClient();
+
+        udpClient.Connect(_ipEndPoint);
 
         while (true)
         {

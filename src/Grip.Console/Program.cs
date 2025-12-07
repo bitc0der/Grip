@@ -18,6 +18,8 @@ class Program
 
         if (IPEndPoint.TryParse(ipEndpoint, out var ipEndPoint))
         {
+            System.Console.WriteLine($"Connecting to '{ipEndPoint}'...");
+
             var dataReader = new ConsoleDataReader();
 
             var receiver = new DataReceiver(ipEndPoint, dataReader);
