@@ -4,6 +4,10 @@ namespace Grip.Data.Definition;
 
 /// <summary>
 /// The motion packet gives physics data for all the cars being driven.
+/// 
+/// Frequency: Rate as specified in menus
+/// Size: 1349 bytes
+/// Version: 1
 /// </summary>
 [StructLayout(LayoutKind.Sequential, Pack = 1)]
 public struct PacketMotionData

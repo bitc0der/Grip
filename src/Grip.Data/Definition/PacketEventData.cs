@@ -3,8 +3,6 @@ using System.Runtime.InteropServices;
 namespace Grip.Data.Definition;
 
 /// <summary>
-/// Event data packet
-///
 /// This packet gives details of events that happen during the course of a session.
 ///
 /// Frequency: When the event occurs
