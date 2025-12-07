@@ -7,8 +7,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Grip.Data\Grip.Data.csproj" />
-  </ItemGroup>
-
 </Project>

@@ -1,4 +1,4 @@
-﻿namespace Grid.Console;
+﻿namespace Grip.Console;
 
 class Program
 {
