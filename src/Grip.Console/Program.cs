@@ -24,5 +24,9 @@ class Program
 
             await receiver.ReceiveAsync();
         }
+        else
+        {
+            System.Console.WriteLine($"IP Endpoint '{ipEndPoint}' is invalid");
+        }
     }
 }
