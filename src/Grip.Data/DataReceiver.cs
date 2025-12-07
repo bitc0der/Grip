@@ -7,10 +7,12 @@ namespace Grip.Data;
 public sealed class DataReceiver
 {
     private readonly DataReader _dataReader;
+    private readonly DataLogger? _dataLogger;
 
-    public DataReceiver(DataReader dataReader)
+    public DataReceiver(DataReader dataReader, DataLogger? dataLogger)
     {
         _dataReader = dataReader ?? throw new ArgumentNullException(nameof(dataReader));
+        _dataLogger = dataLogger;
     }
 
     public async Task ReceiveAsync(CancellationToken cancellationToken)
@@ -104,6 +106,11 @@ public sealed class DataReceiver
         ArgumentNullException.ThrowIfNull(udpClient);
 
         var result = await udpClient.ReceiveAsync(cancellationToken);
+
+        if (_dataLogger is not null && result.Buffer.Length > 0)
+        {
+            await _dataLogger.LogDataAsync(result.Buffer, cancellationToken);
+        }
 
         var value = ReadStruct<T>(result.Buffer);
 
