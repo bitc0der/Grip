@@ -20,7 +20,8 @@ class Program
         {
             System.Console.WriteLine($"Connecting to '{ipEndPoint}'...");
 
-            var dataReader = new ConsoleDataReader();
+            var telemetryData = new TelemetryData();
+            var dataReader = new TelemetryDataReader(telemetryData);
 
             var receiver = new DataReceiver(ipEndPoint, dataReader);
 
