@@ -3,7 +3,11 @@ using System.Runtime.InteropServices;
 namespace Grip.Data.Definition;
 
 /// <summary>
-/// Motion extended data packet
+/// The motion packet gives extended data for the car being driven with the goal of being able to drive a motion platform setup.
+///
+/// Frequency: Rate as specified in menus
+/// Size: 237 bytes
+/// Version: 1
 /// </summary>
 [StructLayout(LayoutKind.Sequential, Pack = 1)]
 public struct PacketMotionExData
