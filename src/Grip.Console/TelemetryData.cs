@@ -10,7 +10,7 @@ internal sealed class TelemetryData
 
     public float BreakPosition { get; private set; } = 0f;
 
-    public TelemetryUpdated Updated { get; set; }
+    public TelemetryUpdated? Updated { get; set; }
 
     public void SetPlayerCarIndex(int playerCarIndex)
     {
@@ -28,6 +28,8 @@ internal sealed class TelemetryData
     private void Notify()
     {
         var updated = Updated;
+        if (updated is null)
+            return;
         updated();
     }
 }
