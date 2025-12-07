@@ -5,6 +5,7 @@ using System.Runtime.InteropServices;
 using System.Threading;
 using System.Threading.Tasks;
 using Grip.Data.Definition.Packet;
+using Grip.Data.Infrastructure;
 
 namespace Grip.Data;
 
@@ -131,22 +132,6 @@ public sealed class DataReceiver
         if (size > buffer.Length)
             throw new InvalidOperationException("Struct size is greater than buffer size");
 
-        return DeserializeStruct<T>(buffer);
-    }
-
-    private static T DeserializeStruct<T>(byte[] buffer)
-        where T : struct
-    {
-        ArgumentNullException.ThrowIfNull(buffer);
-
-        var handle = GCHandle.Alloc(buffer, GCHandleType.Pinned);
-        try
-        {
-            return Marshal.PtrToStructure<T>(handle.AddrOfPinnedObject());
-        }
-        finally
-        {
-            handle.Free();
-        }
+        return BinaryDeserializer.Deserialize<T>(buffer);
     }
 }
